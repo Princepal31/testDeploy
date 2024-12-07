@@ -4,11 +4,11 @@ RUN mkdir /build
 WORKDIR /build
 
 RUN export GO111MODULE=on
-RUN go install github.com/Princepal31/gin-gonic@latest
-RUN cd /build && git clone https://github.com/Princepal31/gin-gonic
+RUN go install github.com/Princepal31/testDeploy@latest
+RUN cd /build && git clone https://github.com/Princepal31/testDeploy
 
-RUN cd /build/Princepal31/GinApiOnly
+RUN cd /build/Princepal31/testDeploy
 
 EXPOSE 8080
 
-ENTRYPOINT [ "/build/Princepal31/GinApiOnly" ]
+ENTRYPOINT [ "/build/Princepal31/testDeploy" ]
