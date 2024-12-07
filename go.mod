@@ -1,4 +1,4 @@
-module testDeploy
+module github.com/Princepal31/testDeploy
 
 go 1.20
 
