@@ -1,0 +1,14 @@
+FROM golang:latest
+
+RUN mkdir /build
+WORKDIR /build
+
+RUN export GO111MODULE=on
+RUN go install github.com/Princepal31/gin-gonic@latest
+RUN cd /build && git clone https://github.com/Princepal31/gin-gonic
+
+RUN cd /build/Princepal31/GinApiOnly
+
+EXPOSE 8080
+
+ENTRYPOINT [ "/build/Princepal31/GinApiOnly" ]
